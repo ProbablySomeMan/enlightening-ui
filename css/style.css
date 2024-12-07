@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('default-pallete.css');
+
+:root {
+  --darkgray: rgba(20, 20, 25);
+  --white: rgb(250, 240, 255);
+  --white: var(--cream);
+  
+  --head-1: 12rem;
+  --head-2: 6rem;
+  --head-3: 3.5rem;
+  --head-4: 3rem;
+  --head-5: 2.5rem;
+  --head-6: 2rem;
+  --par: 1.7rem;
+
+  --btn-padding-h: calc(.1rem + .1em);
+  --btn-padding-v: calc(.8rem + .1em);
+  --border-r: 2.5rem;
+  --footer: auto;
+
+  --bg-dark: var(--darkgray);
+  --bg-light: var(--white);
+
+  --text-color: var(--darkgray);
+
+  --bg: var(--bg-dark);
+  --non-bg: var(--white);
+  --decoration: unset;
+
+  --button-bg: var(--white);
+  --accent-color: var(--darkgray);
+
+  --danger: var(--red);
+  --positive: var(--green);
+
+  --font-clr: var(--white);
+  --text-secondary: var(--darkgray);
+
+  --role-color: var(--red);
+  --visited: var(--orange);
+  overflow-y: scroll;
+  scrollbar-color: var(--cream) var(--bg);
+  scrollbar-width: thin;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  height: auto;
+  max-width: 100vw;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+.danger {
+  --accent-color: var(--danger);
+}
+
+.secondary {
+}
+
+.normal {
+  --accent-color: var(--purple);
+  --accent-color-2: var(--cream);
+}
+
+.ui {
+  border-radius: var(--border-r);
+}
+
+*:where(h1, h2, h3, h4, h5, h6, p, span, ul, li){
+  margin: 0 auto;
+  line-height: 1.6;
+  margin-top: 0;
+  margin: none;
+  color: var(--non-bg);
+}
+
+.ui *:where(h1, h2, h3, h4, h5, h6, a, p, span, ul, li){
+  --accent-color: inherit;
+  --accent-color-2: inherit;
+  color: var(--btn-t-color);
+  text-decoration: var(--decoration) underline;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100vh;
+  width: 3em;
+}
+
+.home * {
+  font-size: var(--head-2);
+}
+
+.home:hover {
+  cursor: pointer
+}
+
+footer {
+  background: var(--bg);
+  width: 100%;
+  margin-top: auto;
+  padding-top: calc(var(--head-2) * 2);
+  display: none;
+  height: var(--footer);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 5fr 1fr 5fr;
+  color: var(--text-color);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.custom-shape-divider-top-1708969438 {
+  position: relative;
+  fill: var(--button-bg);
+  width: 100%;
+}
+
+@keyframes wbicie {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+*:where(.ui) {
+  padding: 1em;
+  background: none;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 1.4em;
+  padding: 1em 1.4em;
+  text-decoration: none;
+}
+
+.container {
+  color: var(--text-color);
+  padding: 1rem;
+  /* width: calc(100% - 3rem); */
+  box-sizing: border-box;
+  /* margin-left: 3em; */
+  min-height: 100%;
+}
+
+
+a > * {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+h1 {
+  --accent-color: var(--byzantium);
+  --accent-color-2: var(--l-blue);
+  text-align: center;
+  font-size: var(--head-1);
+  width: clamp(100%, 70vw, 10* var(--head-1));
+}
+
+/* h1::after {
+  display: inline-block;
+  content: "";
+  position: relative;
+  top: -.8em;
+  left: 0;
+  width: 100%;
+  transform: perspective(20px) rotateX(3deg);
+  filter: blur(16px);
+  height: var(--head-2);
+  background-color: currentColor;
+}
+*/
+
+h1:hover {
+  text-shadow: 0 0 32px var(--byzantium);
+}
+
+h2 {
+  font-size: var(--head-2);
+}
+
+h3 {
+  font-size: var(--head-3);
+}
+
+h4 {
+  font-size: var(--head-4);
+}
+
+h5 {
+  font-size: var(--head-5);
+}
+
+h6 {
+  font-size: var(--head-6);
+}
+
+p {
+  font-size: var(--par);
+}
+
+a.ui , button.ui {
+  /*
+  --btn-padding-h: .4em;
+  --btn-padding-v: .8em;
+
+  --border-r: 1em;
+  */
+
+  box-sizing: border-box;
+  font-size: var(--head-4);
+  padding: var(--btn-padding-h) var(--btn-padding-v);
+  background-color: var(--white); 
+  color: var(--text-secondary);
+  border: none;
+  border-radius: var(--border-r);
+  box-shadow: 0px .3em 0px var(--accent-color),
+              0px .2em 16px var(--non-bg);
+  width: fit-content;
+  margin-bottom: clamp(.3em + .1em, .3em + 2em, 10em);
+  margin-left: calc(.1rem + 1em);
+
+  justify-self: left;
+}
+
+a:not(.ui)visited {
+  color: var(--visited);
+}
+
+button:not([disabled]).ui {
+  cursor: pointer;
+}
+button[disabled].ui, a[disabled].ui {
+  color: var(--not-bg);
+  cursor: not-allowed;
+  opacity: 50%;
+}
+
+a.ui, button.ui > * {
+  margin-bottom: auto;
+}
+
+.ui:where(:not(.secondary)) {
+  color: var(--btn-t-color);
+}
+
+button h4:empty:after {
+  content: 'guzik...';
+  color: var(--cream);
+}
+
+a.ui:not([disabled]):active, button:not([disabled]):active {
+  transition: 100ms ease;
+  box-shadow: 0px .2em 0px var(--accent-color),
+              0px .2em 16px var(--non-bg);
+  transform: translateY(.2em);
+}
+
+img.profilowe {
+  min-width: calc(var(--head) * 5);
+  max-width: calc(var(--head-4) * 7);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: 33%;
+}
+
+.ui.secondary {
+  color: var(--text-color);
+  --border: .3rem;
+  border: solid var(--border) var(--accent-color-2);
+  padding: calc(var(--btn-padding-h) - var(--border)) calc(var(--btn-padding-v) - var(--border));
+}
+
+.karta {
+  --accent-color: var(--l-blue);
+  font-size: var(--head-2);
+  background-color: var(--gray);
+  width: fit-content;
+  margin: 0 auto;
+  padding: .4em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  animation: wbicie 3s;
+  height: fit-content;
+  justify-self: center;
+}
+
+.tekst {
+  display: flex;
+  flex-direction: column;
+}
+
+.rola {
+  display: inline-block;
+  padding: 0 .5em;
+  max-width: 6em;
+  background-color: var(--role-color);
+  border-radius: 1em;
+}
+
+.karta h2 {
+  color: var(--accent-color);
+  text-align: center;
+}
+
+article {
+  color: var(--text-color);
+  box-sizing: border-box;
+  background: linear-gradient(to top right, var(--bg), var(--accent-color));
+  /* padding: var(--head-4) var(--head-3); */
+  border-radius: calc(var(--head-2) * 0.6);
+  margin: 0 auto;
+  margin-bottom: var(--head-3);
+  width: max(200px, 95%);
+  display: grid;
+  grid-template: "header header header "
+                 "more   date   profile";
+  grid-template-columns: auto auto auto;
+  grid-gap: clamp(5px, var(--head-5), 3em);
+  justify-items: center;
+  align-items: center;
+}
+
+article > h1, h2, h3, h4:first-of-type {
+  grid-area: header;
+}
+
+.date {
+  grid-area: date;
+}
+
+article > a.ui {
+  grid-area: more;
+}
+
+.profile-card {
+  grid-area: profile;
+  border-radius: 2em;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+}
+
+article:nth-child(even) {
+  --accent-color: var(--orange); 
+  --accent-color-2: var(--bg); 
+}
+article:nth-child(odd) {
+  --accent-color: var(--danger); 
+  --accent-color-2: var(--bg); 
+}
+
+.body-text {
+  margin: 0 auto;
+}
+
+.vline {
+  width: 2px;
+  background-color: var(--non-bg);
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hline {
+  width: 90%;
+  background-color: var(--non-bg);
+  height: 2px;
+  margin: 0 auto;
+  margin-bottom: .5rem;
+}
+.border {
+  border: 3px solid var(--text-color);
+}
+
+@media (min-width: 1080px) {
+  :root {
+    --modif: 0.1vw;
+    --head-1: clamp(3.5rem, 12vw + 1rem, 5rem);
+    --head-2: calc(2rem + var(--modif));
+    --head-3: calc(1.75rem + var(--modif));
+    --head-4: calc(1.6rem + var(--modif));
+    --head-5: calc(1.45rem + var(--modif));
+    --par: calc(1.2rem + var(--modif));
+  }
+  .body-text {
+    width: 70%;
+    float: left;
+    display: inline;
+    margin: 0;
+  }
+  footer {
+    display: block;
+  }
+}
+
+.top-pad {
+  margin-top: 2em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: var(--white);
+    --btn-t-color: var(--darkgray);
+    --bg: var(--bg-dark);
+    --non-bg: var(--bg-light);
+  }
+  .text_gradient {
+    background: linear-gradient(var(--accent-color), var(--accent-color-2));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: var(--black);
+    --bg: var(--bg-light);
+    --non-bg: var(--bg-dark);
+  }
+  .text_gradient{
+    background: none;
+    color: var(--black);
+  }
+}
