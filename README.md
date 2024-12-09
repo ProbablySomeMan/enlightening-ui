@@ -8,4 +8,4 @@ however, aims to package it into reusable elements. I plan to either implement
 them as components in the near future, or to create a very serious fork that is
 going to take care of aspects like these.
 
-Simple demonstration: [image](demo.png)
+Simple demonstration: <img src="demo.png" alt="demo">
