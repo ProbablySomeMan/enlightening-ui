@@ -347,15 +347,6 @@ a.ui:not([disabled]):active, button:not([disabled]):active {
               0px .2em 16px var(--accent-color);
   transform: translateY(.2em);
 }
-
-img.profilowe {
-  min-width: calc(var(--head) * 5);
-  max-width: calc(var(--head-4) * 7);
-  aspect-ratio: 1 / 1;
-  height: auto;
-  border-radius: 33%;
-}
-
 .ui.secondary {
   color: var(--text-color);
   --border: .3rem;
