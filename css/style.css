@@ -222,7 +222,7 @@ epilogue h4 {
   background: none;
   border: 1px solid black;
   box-sizing: border-box;
-  border-radius: 1.4em;
+  border-radius: var(--border-r);
   padding: 1em 1.4em;
   text-decoration: none;
 }
@@ -347,15 +347,6 @@ a.ui:not([disabled]):active, button:not([disabled]):active {
               0px .2em 16px var(--accent-color);
   transform: translateY(.2em);
 }
-
-img.profilowe {
-  min-width: calc(var(--head) * 5);
-  max-width: calc(var(--head-4) * 7);
-  aspect-ratio: 1 / 1;
-  height: auto;
-  border-radius: 33%;
-}
-
 .ui.secondary {
   color: var(--text-color);
   --border: .3rem;
@@ -464,6 +455,30 @@ article:nth-child(odd) {
 }
 .border {
   border: 3px solid var(--text-color);
+}
+
+img.ui {
+  --accent-color: var(--byzantium);
+  border-radius: var(--border-r);
+  background-color: var(--cream);
+  font-size: var(--par);
+  padding: .1em;
+  margin-bottom: 1em;
+  margin-left: 4em;
+  box-shadow: 0px .3em 0px var(--accent-color),
+              0px .2em 16px var(--non-bg);
+  display: inline;
+}
+
+.image-desc {
+  background-color: var(--cream);
+  border: 6px solid var(--blue);
+  position: relative;
+  margin-bottom: 3em;
+  margin-left: 4em;
+  top: 0;
+  right: 0;
+  display: inline-block;
 }
 
 @media (min-width: 1080px) {
