@@ -505,6 +505,26 @@ img.ui {
   */
 }
 
+.notif {
+  width: 17em;
+  height: 10em;
+  background-color: var(--accent-color);
+  position: sticky;
+  top: 3em;
+  display: block;
+  margin: 0 auto;
+  animation: vanishing;
+}
+
+@keyframes vanishing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: var(--white);
