@@ -26,6 +26,7 @@ Notification.prototype.add = function() {
       <br>
       <button class="ui dismiss">dismiss</button>
     </div> 
+    <br>
   `);
   this.domElement = document.getElementById(`notif${this.notifId}`)
   this.dismissButton = document.querySelector(`#notif${this.notifId} .dismiss`)
