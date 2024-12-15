@@ -506,14 +506,18 @@ img.ui {
 }
 
 .notif {
+  margin-top: 2em;
   width: 17em;
   height: 10em;
+  padding: 2em;
   background-color: var(--accent-color);
   position: sticky;
-  top: 3em;
+  top: 4em;
   display: block;
   margin: 0 auto;
   /* animation: vanishing 500ms ease forwards; */
+  border-radius: var(--border-r);
+  transform: translateY(2em);
 }
 
 .notif-slot {
