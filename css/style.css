@@ -6,16 +6,16 @@
   --white: rgb(250, 240, 255);
   --white: var(--cream);
   
-  --head-1: 12rem;
-  --head-2: 6rem;
-  --head-3: 3.5rem;
-  --head-4: 3rem;
-  --head-5: 2.5rem;
-  --head-6: 2rem;
-  --par: 1.7rem;
+  --head-1: 10rem;
+  --head-2: 8rem;
+  --head-3: 5rem;
+  --head-4: 4rem;
+  --head-5: 3.5rem;
+  --head-6: 3rem;
+  --par: 4rem;
 
-  --btn-padding-h: calc(.2rem + .1em);
-  --btn-padding-v: calc(1rem + .1em);
+  --btn-padding-h: calc(.6rem + .2em);
+  --btn-padding-v: calc(2rem + .2em);
   --border-r: 2.5rem;
   --footer-h: 10rem;
 
@@ -44,13 +44,17 @@
   scrollbar-width: thin;
 }
 
+html {
+  min-width: 100%;
+}
+
 body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   background-color: var(--bg);
   height: auto;
-  max-width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -218,12 +222,12 @@ epilogue h4 {
 }
 
 *:where(.ui) {
-  padding: .7em;
+  padding: .7rem;
   background: none;
   border: 1px solid black;
   box-sizing: border-box;
   border-radius: var(--border-r);
-  padding: 1em 1.4em;
+  padding: 1rem 1.4em;
   text-decoration: none;
 }
 
@@ -300,7 +304,7 @@ a.ui , button.ui {
   */
 
   box-sizing: border-box;
-  font-size: var(--head-4);
+  font-size: var(--head-3);
   padding: var(--btn-padding-h) var(--btn-padding-v);
   background-color: var(--white); 
   color: var(--text-secondary);
@@ -481,6 +485,23 @@ img.ui {
   display: inline-block;
 }
 
+.notif {
+  margin-top: 2em;
+  width: 80%;
+  height: minmax(10em, 400%);
+  padding: 2em;
+  background-color: var(--accent-color);
+  position: sticky;
+  top: 4em;
+  display: block;
+  margin: 0 auto;
+  /* animation: vanishing 500ms ease forwards; */
+  border-radius: var(--border-r);
+  transform: translateY(2em);
+}
+
+
+
 @media (min-width: 1080px) {
   :root {
     --modif: 0.1vw;
@@ -498,6 +519,18 @@ img.ui {
     display: inline;
     margin: 0;
   }
+  .notif {
+    margin-top: 2em;
+    width: 17em;
+    height: minmax(10rem, 400%);
+    padding: 2em;
+    background-color: var(--accent-color);
+    position: sticky;
+    display: block;
+    margin: 0 auto;
+    border-radius: var(--border-r);
+    transform: translateY(2em);
+  }
   /* remnants of the code that would make footer invisible in the mobile mode
    * footer {
     display: block;
@@ -505,20 +538,6 @@ img.ui {
   */
 }
 
-.notif {
-  margin-top: 2em;
-  width: 17em;
-  height: 10em;
-  padding: 2em;
-  background-color: var(--accent-color);
-  position: sticky;
-  top: 4em;
-  display: block;
-  margin: 0 auto;
-  /* animation: vanishing 500ms ease forwards; */
-  border-radius: var(--border-r);
-  transform: translateY(2em);
-}
 
 .notif-slot {
   width: 100%;
