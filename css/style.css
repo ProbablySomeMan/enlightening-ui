@@ -113,10 +113,6 @@ input.ui, select.ui {
   background-color: var(--cream);
   font-size: var(--par);
   padding: .5em;
-  margin-bottom: 3em;
-  box-shadow: 0px .3em 0px var(--accent-color),
-              0px .2em 16px var(--non-bg);
-  width: auto;
 }
 
 select.ui {
@@ -205,6 +201,13 @@ epilogue h4 {
                        "l l l"
                        "e e e";
 }
+
+.element-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
 .footer-container {
   display: grid;
   grid-template-rows: 1fr;
@@ -233,6 +236,18 @@ epilogue h4 {
   border-radius: var(--border-r);
   padding: 1rem 1.4em;
   text-decoration: none;
+  padding: var(--btn-padding-h) var(--btn-padding-v);
+  background-color: var(--white); 
+  color: var(--text-secondary);
+  border: none;
+  border-radius: var(--border-r);
+  box-shadow: 0px .3em 0px var(--accent-color),
+              0px .2em 16px var(--non-bg);
+  width: fit-content;
+  margin-bottom: clamp(calc(3rem + 3em), calc(3rem + 2em), 10em);
+  margin-left: calc(.1rem + 1em);
+
+  justify-self: center;
 }
 
 .container {
@@ -309,18 +324,6 @@ a.ui , button.ui {
 
   box-sizing: border-box;
   font-size: var(--head-3);
-  padding: var(--btn-padding-h) var(--btn-padding-v);
-  background-color: var(--white); 
-  color: var(--text-secondary);
-  border: none;
-  border-radius: var(--border-r);
-  box-shadow: 0px .3em 0px var(--accent-color),
-              0px .2em 16px var(--non-bg);
-  width: fit-content;
-  margin-bottom: clamp(.3em + .1em, .3em + 2em, 10em);
-  margin-left: calc(.1rem + 1em);
-
-  justify-self: left;
 }
 
 a:not(.ui)visited {
@@ -549,6 +552,24 @@ img.ui {
   }
 }
 
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--accent-color);
+  height: .5em;
+  border-radius: var(--border-r);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--white);
+  border-radius: var(--border-r);
+  width: 25px;
+  height: 25px;
+  box-shadow: 0px .3em 0px var(--accent-color),
+              0px .2em 16px var(--bg);
+}
 
 .notif-slot {
   width: 100%;
@@ -556,6 +577,7 @@ img.ui {
   position: fixed;
   display: block;
 }
+
 
 @keyframes vanishing {
   0% {
