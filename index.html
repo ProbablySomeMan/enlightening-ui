@@ -21,19 +21,23 @@
   <br>
   <p>paragraph</p>
   <br>
-  <div class="container">
+  <div class="container element-container">
     <button class="ui">standard button</button>
     <button class="ui danger" id="event-01">button indicating an error</button>
     <button class="ui positive" id="event-02">button indicating a success</button>
   </div>
-  <input class="ui" placeholder="insert text" type="text">
+  <div class="container element-container">
+    <input class="ui" placeholder="insert text" type="text">
+    <select id="quotes" class="ui" name="quotes">
+      <option value="alea_iacta_est">Alea iacta est</option>
+      <option value="veni_vidi_vici">Veni, vidi, vici</option>
+      <option value="carthago_delenda_est">Carthago delenda est</option>
+    </select>
 
-  <select id="quotes" class="ui" name="quotes">
-    <option value="alea_iacta_est">Alea iacta est</option>
-    <option value="veni_vidi_vici">Veni, vidi, vici</option>
-    <option value="carthago_delenda_est">Carthago delenda est</option>
-  </select>
-
+    <div class="ui slider-container">
+      <input type="range" min="1" max="100" value="50" class="slider danger" id="myRange"></input>
+  </div>
+  </div>
   <div class="hline-full"></div>
   <div class="footer">
     <ul>
