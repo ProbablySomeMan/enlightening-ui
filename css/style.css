@@ -578,6 +578,25 @@ img.ui {
   display: block;
 }
 
+table {
+  margin-left: 5rem;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+}
+
+th {
+  font-size: var(--head-4);
+  color: var(--accent-color);
+  padding-right: 3em;
+  border-bottom: solid var(--accent-color);
+  border-left: solid var(--accent-color);
+  border-radius: var(--border-r);
+}
+
+tr {
+  font-size: var(--head-5);
+  padding-bottom: 3em;
+}
 
 @keyframes vanishing {
   0% {
