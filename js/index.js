@@ -3,6 +3,8 @@ const errorButton = document.getElementById("event-01");
 
 const successButton = document.getElementById("event-02");
 
+const knob = document.getElementById("event-03")
+
 let notifs = []
 
 var notifNumber = 0
@@ -53,3 +55,74 @@ errorButton.addEventListener("click", () => {
 successButton.addEventListener("click", () => {
   notifs.push(new Notification('positive', 'Test successful', 'text of a successfull message', notifNumber).add())
 })
+
+function knobFunction(e) {
+  var value = 0;
+
+  let prevX = 0;
+  let prevY = 0;
+
+  const w = knob.clientWidth / 2;
+  const h = knob.clientHeight / 2;
+
+  const x = e.clientX - knob.offsetLeft;
+  const y = e.clientY - knob.offsetTop;
+
+  const deltaX = w - x;
+  const deltaY = h - y;
+
+  const rad = Math.atan2(deltaY, deltaX);
+
+  let deg = rad * (180 / Math.PI)
+
+  if (y < h && x > w) {
+    if (prevX <= x && prevY <= y) {
+      value++;
+    } else if (prevX >= x && prevY >= y) {
+      value--;
+    }
+  }
+  else if (y > h && x > w) {
+    if (prevX >= x && prevY <= y) {
+      value++;
+    } else if (prevX <= x && prevY >= y) {
+      value--;
+    }
+  } 
+  else if (y < h && x < w) {
+    if (prevX <= x && prevY >= y) {
+      value++;
+    } else if (prevX >= x && prevY <= y) {
+      value--;
+    }
+  } 
+  else if (y > h && x < w) {
+    if (prevX >= x && prevY >= y) {
+      value++;
+    } else if (prevX <= x && prevY <= y) {
+      value--;
+    }
+  } 
+  
+  prevX = x;
+  prevY = y;
+  
+  console.log(deg)
+  return deg;
+} 
+
+function rotate(e) {
+  const result = Math.floor(knobFunction(e) - 80);
+  knob.style.transform = `rotate(${result}deg)`
+}
+
+function startRotation() {
+  window.addEventListener('mousemove', rotate);
+  window.addEventListener('mouseup', endRotation);
+}
+
+function endRotation() {
+  window.removeEventListener("mousemove", rotate);
+}
+
+knob.addEventListener("mousedown", startRotation);
