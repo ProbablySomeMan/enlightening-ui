@@ -47,7 +47,7 @@
 }
 
 html {
-  min-width: 100%;
+  width: 100vw;
 }
 
 body {
@@ -56,8 +56,7 @@ body {
   margin: 0;
   background-color: var(--bg);
   height: auto;
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
 }
@@ -148,15 +147,6 @@ input.ui::before {
   height: 100vh;
   width: 3em;
 }
-
-.home * {
-  font-size: var(--head-2);
-}
-
-.home:hover {
-  cursor: pointer
-}
-
 .footer h4 {
   grid-area: h;
   display: block;
@@ -204,6 +194,8 @@ epilogue h4 {
 
 .element-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 6em;
   align-items: center;
   justify-items: center;
 }
@@ -556,7 +548,8 @@ img.ui {
   -webkit-appearance: none;
   appearance: none;
   background: var(--accent-color);
-  height: .5em;
+  height: 1em;
+  width: 30em;
   border-radius: var(--border-r);
 }
 
@@ -565,10 +558,14 @@ img.ui {
   appearance: none;
   background: var(--white);
   border-radius: var(--border-r);
-  width: 25px;
-  height: 25px;
+  width: 4em;
+  height: 4em;
   box-shadow: 0px .3em 0px var(--accent-color),
               0px .2em 16px var(--bg);
+}
+
+.slider-container {
+  min-height: 3em;
 }
 
 .notif-slot {
@@ -579,18 +576,26 @@ img.ui {
 }
 
 table {
-  margin-left: 5rem;
-  margin-bottom: 10rem;
-  margin-top: 10rem;
+  margin-left: 5em;
+  margin-bottom: 10em;
+  margin-top: 10em;
+}
+
+.table-cont {
+  overflow: auto;
+  height: auto;
+}
+
+tbody {
+  overflow: auto;
 }
 
 th {
   font-size: var(--head-4);
   color: var(--accent-color);
   padding-right: 3em;
-  border-bottom: solid var(--accent-color);
-  border-left: solid var(--accent-color);
   border-radius: var(--border-r);
+  margin-left: 2em;
 }
 
 tr {
