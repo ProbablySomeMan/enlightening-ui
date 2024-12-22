@@ -603,6 +603,13 @@ tr {
   padding-bottom: 3em;
 }
 
+.knob {
+  width: 5em;
+  height: 5em;
+  background: linear-gradient(var(--black), var(--white));
+  border-radius: 50%;
+}
+
 @keyframes vanishing {
   0% {
     opacity: 1;
