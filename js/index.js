@@ -107,13 +107,18 @@ function knobFunction(e) {
   prevX = x;
   prevY = y;
   
-  console.log(deg)
   return deg;
 } 
 
 function rotate(e) {
-  const result = Math.floor(knobFunction(e) - 80);
+  var result = Math.floor((knobFunction(e) - 80) * 30);
+  if (result < 0) {result = 0} else if (result > 360) {result = 360}
   knob.style.transform = `rotate(${result}deg)`
+  
+  percentage = Math.round((result / 360) * 100)
+
+  document.getElementById('event-03-value').innerHTML = percentage;
+  return percentage;
 }
 
 function startRotation() {
@@ -126,3 +131,4 @@ function endRotation() {
 }
 
 knob.addEventListener("mousedown", startRotation);
+
