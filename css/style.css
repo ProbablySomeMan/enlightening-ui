@@ -604,10 +604,32 @@ tr {
 }
 
 .knob {
+  pointer-events: auto;
   width: 5em;
   height: 5em;
-  background: linear-gradient(var(--black), var(--white));
+  background: transparent;
   border-radius: 50%;
+}
+.knob-bg{
+  pointer-events: none;
+  width: 5em;
+  height: 5em;
+  box-shadow: 0px .3em 0px var(--accent-color);
+  border-radius: 50%;
+  background-color: var(--black);
+}
+
+.knob-arrow{
+  display: inline-block;
+  top: 1em;
+  left: 1.5em;
+  width: 2em;
+  height: .5em;
+  content: '';
+  position: absolute;
+  background: var(--accent-color);
+  transform: rotate(90deg);
+  border-radius: 25%;
 }
 
 @keyframes vanishing {
