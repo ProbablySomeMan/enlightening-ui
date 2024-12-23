@@ -56,7 +56,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   margin: none;
-  padding: none;
+  padding: 3em;
 }
 
 a {
@@ -603,15 +603,15 @@ tr {
 
 .knob {
   pointer-events: auto;
-  width: 5em;
-  height: 5em;
+  aspect-ratio: 1 / 1;
   background: transparent;
   border-radius: 50%;
 }
 .knob-bg{
   pointer-events: none;
-  width: 5em;
-  height: 5em;
+  aspect-ratio: 1 / 1;
+  width: clamp(10em, 20%, 50%);
+  height: auto;
   box-shadow: 0px .3em 0px var(--accent-color);
   border-radius: 50%;
   background-color: var(--black);
@@ -619,15 +619,18 @@ tr {
 
 .knob-arrow{
   display: inline-block;
-  top: 1em;
-  left: 1.5em;
-  width: 2em;
+  top: 10%;
+  left: 32%;
+  width: 32%;
   height: .5em;
-  content: '';
-  position: absolute;
+  position: relative;
   background: var(--accent-color);
   transform: rotate(90deg);
-  border-radius: 25%;
+  border-radius: 1em;
+}
+
+.ui-medium {
+  width: clamp(10em, 40%, 50em);
 }
 
 @keyframes vanishing {
