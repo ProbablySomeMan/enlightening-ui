@@ -46,19 +46,17 @@
   --min-width: 3em;
 }
 
-html {
-  width: 100vw;
-}
-
 body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  margin: 0;
   background-color: var(--bg);
   height: auto;
-  width: 100vw;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  margin: none;
+  padding: none;
 }
 
 a {
