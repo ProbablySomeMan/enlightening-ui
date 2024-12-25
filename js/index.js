@@ -3,7 +3,15 @@ const errorButton = document.getElementById("event-01");
 
 const successButton = document.getElementById("event-02");
 
+const slider = document.querySelector('.slider')
+
 const knob = document.getElementById("event-03")
+
+// set all dynamic value placeholders
+
+const dynamicValues = document.querySelector('.dyn-val')
+
+dynamicValues.innerHTML = '---'
 
 let notifs = []
 
@@ -132,3 +140,8 @@ function endRotation() {
 
 knob.addEventListener("mousedown", startRotation);
 
+slider.addEventListener('input', () => {
+  let newColor = Math.floor((slider.value / 100 ) * 256)
+  document.documentElement.style.setProperty('--danger', `rgb(${newColor}, 0, 56)`)
+  document.querySelector('.slider-container .dyn-val').innerHTML= newColor;
+})
