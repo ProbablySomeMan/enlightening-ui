@@ -6,17 +6,17 @@
   --white: rgb(250, 240, 255);
   --white: var(--cream);
   
-  --head-1: 10rem;
-  --head-2: 8rem;
+  --head-1: 7.5rem;
+  --head-2: 6rem;
   --head-3: 5rem;
   --head-4: 4rem;
   --head-5: 3.5rem;
   --head-6: 3rem;
   --par: 4rem;
 
-  --btn-padding-h: calc(.6rem + .2em);
-  --btn-padding-v: calc(2rem + .2em);
-  --border-r: 2.5rem;
+  --btn-padding-h: calc(.3rem + .4em);
+  --btn-padding-v: calc(1rem + .4em);
+  --border-r: calc(2rem + 1em);
   --footer-h: 10rem;
 
   --bg-dark: var(--darkgray);
@@ -51,12 +51,14 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   height: auto;
-  max-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-content: center;
   box-sizing: border-box;
-  margin: none;
-  padding: 3em;
+  margin: 0;
+  padding: 1em;
+  gap: 2em;
 }
 
 a {
@@ -109,7 +111,6 @@ ul {
 input.ui, select.ui {
   background-color: var(--cream);
   font-size: var(--par);
-  padding: .5em;
 }
 
 select.ui {
@@ -119,6 +120,7 @@ select.ui {
 input.ui {
   padding-left: 2em;
   outline: none;
+  max-width: 80%;
 }
 
 input::placeholder {
@@ -193,9 +195,8 @@ epilogue h4 {
 .element-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 6em;
-  align-items: center;
-  justify-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .footer-container {
@@ -219,7 +220,6 @@ epilogue h4 {
 }
 
 *:where(.ui) {
-  padding: .7rem;
   background: none;
   border: 1px solid black;
   box-sizing: border-box;
@@ -230,12 +230,10 @@ epilogue h4 {
   background-color: var(--white); 
   color: var(--text-secondary);
   border: none;
-  border-radius: var(--border-r);
   box-shadow: 0px .3em 0px var(--accent-color),
               0px .2em 16px var(--non-bg);
   width: fit-content;
-  margin-bottom: clamp(calc(3rem + 3em), calc(3rem + 2em), 10em);
-  margin-left: calc(.1rem + 1em);
+  margin-bottom: 3em; 
 
   justify-self: center;
 }
@@ -245,7 +243,6 @@ epilogue h4 {
   padding: 1rem;
   /* width: calc(100% - 3rem); */
   box-sizing: border-box;
-  /* margin-left: 3em; */
 }
 
 
@@ -306,13 +303,6 @@ p {
 }
 
 a.ui , button.ui {
-  /*
-  --btn-padding-h: .4em;
-  --btn-padding-v: .8em;
-
-  --border-r: 1em;
-  */
-
   box-sizing: border-box;
   font-size: var(--head-3);
 }
@@ -461,12 +451,10 @@ article:nth-child(odd) {
 
 img.ui {
   --accent-color: var(--byzantium);
-  border-radius: var(--border-r);
   background-color: var(--cream);
   font-size: var(--par);
   padding: .1em;
   margin-bottom: 1em;
-  margin-left: 4em;
   box-shadow: 0px .3em 0px var(--accent-color),
               0px .2em 16px var(--non-bg);
   display: inline;
@@ -477,7 +465,6 @@ img.ui {
   border: 6px solid var(--blue);
   position: relative;
   margin-bottom: 3em;
-  margin-left: 4em;
   top: 0;
   right: 0;
   display: inline-block;
@@ -496,12 +483,6 @@ img.ui {
   /* animation: vanishing 500ms ease forwards; */
   border-radius: var(--border-r);
   transform: translateY(2em);
-}
-
-
-.ui {
-  margin: 0 auto;
-  max-width: 80%;
 }
 
 @media (min-width: 1080px) {
@@ -533,13 +514,11 @@ img.ui {
     border-radius: var(--border-r);
     transform: translateY(2em);
   }
-  /* remnants of the code that would make footer invisible in the mobile mode
-   * footer {
-    display: block;
-  }
-  */
   body {
     display: inherit;
+  }
+  .ui {
+    margin-left: 2em;
   }
 }
 
@@ -575,7 +554,6 @@ img.ui {
 }
 
 table {
-  margin-left: 5em;
   margin-bottom: 10em;
   margin-top: 10em;
 }
@@ -594,7 +572,6 @@ th {
   color: var(--accent-color);
   padding-right: 3em;
   border-radius: var(--border-r);
-  margin-left: 2em;
 }
 
 tr {
