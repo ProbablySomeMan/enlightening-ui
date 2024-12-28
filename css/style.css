@@ -108,7 +108,7 @@ ul {
   text-decoration: var(--decoration) underline;
 }
 
-input.ui, select.ui {
+*:where(input.ui, select.ui) {
   background-color: var(--cream);
   font-size: var(--par);
 }
@@ -220,6 +220,7 @@ epilogue h4 {
 }
 
 *:where(.ui) {
+  --shade-color: var(--accent-color);
   background: none;
   border: 1px solid black;
   box-sizing: border-box;
@@ -230,12 +231,23 @@ epilogue h4 {
   background-color: var(--white); 
   color: var(--text-secondary);
   border: none;
-  box-shadow: 0px .3em 0px var(--accent-color),
+  box-shadow: 0px .3em 0px var(--shade-color),
               0px .2em 16px var(--non-bg);
   width: fit-content;
   margin-bottom: 3em; 
 
   justify-self: center;
+}
+
+.color-cont {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.color-cont .ui:not(.theme) {
+  background-color: var(--accent-color);
+  color: var(--white);
+  --shade-color: var(--accent-color-2)
 }
 
 .container {
@@ -324,9 +336,10 @@ a.ui, button.ui > * {
   margin-bottom: auto;
 }
 
-.ui:where(:not(.secondary)) {
+/* .ui:where(:not(.secondary)) {
   color: var(--btn-t-color);
 }
+*/
 
 button h4:empty:after {
   content: 'guzik...';
@@ -632,6 +645,13 @@ tr {
 .dyn-val {
   width: 4em;
   height: 1em;
+}
+
+.purple-theme {
+  --accent-color: var(--byzantium);
+  --accent-color-2: var(--white);
+
+  --text-color: var(--white)
 }
 
 @keyframes vanishing {
