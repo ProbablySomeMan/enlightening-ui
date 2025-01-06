@@ -30,6 +30,7 @@
 
   --button-bg: var(--white);
   --accent-color: var(--darkgray);
+  --accent-color-2: var(--non-bg);
 
   --danger: var(--red);
   --positive: var(--green);
@@ -115,6 +116,11 @@ ul {
 
 select.ui {
   width: auto;
+}
+
+*::selection {
+  color: var(--black);
+  background-color: var(--accent-color-2);
 }
 
 input.ui {
