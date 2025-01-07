@@ -660,6 +660,11 @@ tr {
   --text-color: var(--white)
 }
 
+.button {
+  /* shadow DOM button container */
+
+}
+
 @keyframes vanishing {
   0% {
     opacity: 1;
