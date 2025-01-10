@@ -13,21 +13,6 @@ const dynamicValues = document.querySelector('.dyn-val')
 
 dynamicValues.innerHTML = '---'
 
-function createButton(type, name, id, contents) {
-  host = document.getElementById(id);
-  let shadow = host.attachShadow({ mode: "open"});
-  let button = document.createElement('div');
-  button.textContent = contents
-  button.class = `ui ${type}`
-  button.textContent = "shadow DOM button content"
-  shadow.appendChild(button)
-  let anotherButton = document.createElement('button')
-  anotherButton.class = `ui ${type}`
-  anotherButton.textContent = "A button within a button"
-  button.appendChild(anotherButton)
-}
-createButton('danger', 'testButton', 'shadow-test', 'button created by function')
-
 let notifs = []
 
 var notifNumber = 0
