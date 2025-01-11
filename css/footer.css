@@ -30,3 +30,14 @@
   grid-area: h;
   display: block;
 }
+
+epilogue {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  grid-area: e;
+  justify-self: center;
+}
+
+epilogue h4 {
+  display: inline-block;
+}

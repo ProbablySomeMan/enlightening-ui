@@ -70,3 +70,28 @@ a.ui, button.ui > * {
   margin: none;
   color: var(--non-bg);
 }
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+*::selection {
+  color: var(--black);
+  background-color: var(--accent-color-2);
+}
+
+select {
+  outline: none;
+  appearance: none;
+  background-image: none;
+}
+
+.body-text {
+  margin: 0 auto;
+}

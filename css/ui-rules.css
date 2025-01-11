@@ -194,3 +194,22 @@ input::placeholder {
   border-radius: var(--border-r);
 }
 
+input.ui {
+
+.rola {
+  display: inline-block;
+  padding: 0 .5em;
+  max-width: 6em;
+  background-color: var(--role-color);
+  border-radius: 1em;
+}
+
+  padding-left: 2em;
+  outline: none;
+  max-width: 80%;
+}
+
+.date {
+  grid-area: date;
+}
+
