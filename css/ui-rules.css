@@ -1,0 +1,196 @@
+*:where(.ui) {
+  --shade-color: var(--accent-color);
+  background: none;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: var(--border-r);
+  padding: 1rem 1.4em;
+  text-decoration: none;
+  padding: var(--btn-padding-h) var(--btn-padding-v);
+  background-color: var(--white); 
+  color: var(--text-secondary);
+  border: none;
+  box-shadow: 0px .3em 0px var(--shade-color),
+              0px .2em 16px var(--non-bg);
+  width: fit-content;
+  margin-bottom: 3em; 
+
+  justify-self: center;
+}
+
+.ui-medium {
+  width: clamp(10em, 50%, 50em);
+  padding: 0 3em 0 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ui-medium p {
+  max-width: 80%
+}
+
+.textbox h1, h2, h3, h4, h5, h6 {
+  display: block;
+  text-align: start;
+}
+
+img.ui {
+  --accent-color: var(--byzantium);
+  background-color: var(--cream);
+  font-size: var(--par);
+  padding: .1em;
+  margin-bottom: 1em;
+  box-shadow: 0px .3em 0px var(--accent-color),
+              0px .2em 16px var(--non-bg);
+  display: inline;
+}
+
+.image-desc {
+  background-color: var(--cream);
+  border: 6px solid var(--blue);
+  position: relative;
+  margin-bottom: 3em;
+  top: 0;
+  right: 0;
+  display: inline-block;
+}
+
+.notif {
+  margin-top: 2em;
+  width: 80%;
+  height: minmax(10em, 400%);
+  padding: 2em;
+  background-color: var(--accent-color);
+  position: sticky;
+  top: 4em;
+  display: block;
+  margin: 0 auto;
+  /* animation: vanishing 500ms ease forwards; */
+  border-radius: var(--border-r);
+  transform: translateY(2em);
+}
+
+article {
+  color: var(--text-color);
+  box-sizing: border-box;
+  background: 4inear-gradient(to top right, var(--bg), var(--accent-color));
+  /* padding: var(--head-4) var(--head-3); */
+  border-radius: calc(var(--head-2) * 0.6);
+  margin: 0 auto;
+  margin-bottom: var(--head-3);
+  width: max(200px, 95%);
+  display: grid;
+  grid-template: "header header header "
+                 "more   date   profile";
+  grid-template-columns: auto auto auto;
+  grid-gap: clamp(5px, var(--head-5), 3em);
+  justify-items: center;
+  align-items: center;
+}
+
+article > (h1, h2, h3, h4):first-of-type {
+  grid-area: header;
+}
+
+.ui *:where(h1, h2, h3, h4, h5, h6, a, p, span, ul, li){
+  --accent-color: inherit;
+  --accent-color-2: inherit;
+  color: var(--btn-t-color);
+  text-decoration: var(--decoration) underline;
+}
+
+*:where(input.ui, select.ui) {
+  background-color: var(--cream);
+  font-size: var(--par);
+}
+
+select.ui {
+  width: auto;
+}
+
+a > * {
+  margin-bottom: 0;
+  text-align: center;
+}
+.ui.secondary {
+  color: var(--text-color);
+  --border: .3rem;
+  border: solid var(--border) var(--accent-color-2);
+  padding: calc(var(--btn-padding-h) - var(--border)) calc(var(--btn-padding-v) - var(--border));
+}
+
+.karta {
+  --accent-color: var(--l-blue);
+  font-size: var(--head-2);
+  background-color: var(--gray);
+  width: fit-content;
+  margin: 0 auto;
+  padding: .4em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  animation: wbicie 3s;
+  height: fit-content;
+  justify-self: center;
+}
+
+.vline-full {
+  width: 2px;
+  background-color: var(--non-bg);
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hline-full {
+  width: 90%;
+  background-color: var(--non-bg);
+  height: 2px;
+  margin: 0 auto;
+  margin-bottom: .5rem;
+}
+.border {
+  border: 3px solid var(--text-color);
+}
+
+.profile-card {
+  grid-area: profile;
+  border-radius: 2em;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+}
+
+article:nth-child(even) {
+  --accent-color: var(--orange); 
+  --accent-color-2: var(--bg); 
+}
+article:nth-child(odd) {
+  --accent-color: var(--danger); 
+  --accent-color-2: var(--bg); 
+}
+.color-cont {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.color-cont .ui:not(.theme) {
+  background-color: var(--accent-color);
+  color: var(--white);
+  --shade-color: var(--accent-color-2)
+}
+
+input.ui::before {
+  color: var(--yellow);
+  content: 'T';
+}
+
+input::placeholder {
+  color: var(--byzantium);
+}
+
+.ui {
+  border-radius: var(--border-r);
+}
+

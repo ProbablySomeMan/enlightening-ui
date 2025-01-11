@@ -1,0 +1,15 @@
+@import url('default-pallete.css');
+.danger {
+  --accent-color: var(--danger);
+  color: var(--accent-color)
+}
+
+.positive {
+  --accent-color: var(--positive);
+  color: var(--accent-color);
+}
+
+.normal {
+  --accent-color: var(--purple);
+  --accent-color-2: var(--cream);
+}

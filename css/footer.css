@@ -1,0 +1,32 @@
+.footer-divider {
+  grid-area: d;
+}
+
+.footer li {
+  display: block;
+  font-size: var(--head-5);
+}
+
+.footer, footer ul {
+  grid-area: l;
+}
+
+.footer, footer {
+  background: var(--bg);
+  width: 100%;
+  margin-top: auto;
+  padding-top: calc(var(--head-2) * 2);
+  padding-bottom: calc(var(--head-2) * 2);
+  display: grid;
+  height: var(--footer-h);
+  grid-template-columns: auto, 200px, auto;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "h h h"
+                       "l l l"
+                       "e e e";
+}
+
+.footer h4 {
+  grid-area: h;
+  display: block;
+}
