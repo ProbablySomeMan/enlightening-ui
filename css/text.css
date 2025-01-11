@@ -1,0 +1,72 @@
+
+h1 {
+  --accent-color: var(--byzantium);
+  --accent-color-2: var(--l-blue);
+  text-align: center;
+  font-size: var(--head-1);
+  width: clamp(100%, 70vw, 10* var(--head-1));
+  display: inline-block;
+}
+
+h1:hover {
+  text-shadow: 0 0 32px var(--byzantium);
+}
+
+h2 {
+  font-size: var(--head-2);
+}
+
+h3 {
+  font-size: var(--head-3);
+}
+
+h4 {
+  font-size: var(--head-4);
+}
+
+h5 {
+  font-size: var(--head-5);
+}
+
+h6 {
+  font-size: var(--head-6);
+}
+
+p {
+  font-size: var(--par);
+}
+
+a:not(.ui)visited {
+  color: var(--visited);
+}
+a.ui, button.ui > * {
+  margin-bottom: auto;
+}
+
+/* h1::after {
+  display: inline-block;
+  content: "";
+  position: relative;
+  top: -.8em;
+  left: 0;
+  width: 100%;
+  transform: perspective(20px) rotateX(3deg);
+  filter: blur(16px);
+  height: var(--head-2);
+  background-color: currentColor;
+}
+*/
+
+/* .ui:where(:not(.secondary)) {
+  color: var(--btn-t-color);
+}
+*/
+
+*:where(h1, h2, h3, h4, h5, h6, p, span, ul, li){
+  display: inline;
+  margin: 0 auto;
+  line-height: 1.6;
+  margin-top: 0;
+  margin: none;
+  color: var(--non-bg);
+}

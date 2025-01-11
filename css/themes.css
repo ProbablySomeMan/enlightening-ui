@@ -1,0 +1,26 @@
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: var(--white);
+    --btn-t-color: var(--darkgray);
+    --bg: var(--bg-dark);
+    --non-bg: var(--bg-light);
+  }
+  .text_gradient {
+    background: linear-gradient(var(--accent-color), var(--accent-color-2));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: var(--black);
+    --bg: var(--bg-light);
+    --non-bg: var(--bg-dark);
+  }
+  .text_gradient{
+    background: none;
+    color: var(--black);
+  }
+}

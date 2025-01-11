@@ -1,0 +1,23 @@
+
+a.ui , button.ui {
+  box-sizing: border-box;
+  font-size: var(--head-3);
+}
+
+button:not([disabled]).ui {
+  cursor: pointer;
+}
+
+button[disabled].ui, a[disabled].ui {
+  color: var(--not-bg);
+  cursor: not-allowed;
+  opacity: 50%;
+}
+
+a.ui:not([disabled]):active, button:not([disabled]):active {
+  transition: 100ms ease;
+  box-shadow: 0px .2em 0px var(--accent-color),
+              0px .2em 16px var(--accent-color);
+  transform: translateY(.2em);
+}
+

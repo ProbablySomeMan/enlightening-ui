@@ -1,0 +1,38 @@
+.knob {
+  pointer-events: auto;
+  aspect-ratio: 1 / 1;
+  background: transparent;
+  border-radius: 50%;
+}
+.knob-bg{
+  pointer-events: none;
+  aspect-ratio: 1 / 1;
+  width: clamp(10em, 20%, 50%);
+  height: auto;
+  box-shadow: 0px .3em 0px var(--accent-color);
+  border-radius: 50%;
+  background-color: var(--black);
+}
+
+.knob-arrow{
+  display: inline-block;
+  top: 10%;
+  left: 32%;
+  width: 32%;
+  height: .5em;
+  position: relative;
+  background: var(--accent-color);
+  transform: rotate(90deg);
+  border-radius: 1em;
+}
+
+.slider {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.dyn-val {
+  width: 4em;
+  height: 1em;
+}
+

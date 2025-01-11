@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="css/style.css" media="all">
+  <link rel="stylesheet" href="css/responsive.css" media="all">
   <meta charset="UTF-8">
   <title>Enlightening demonstration</title>
 </head>
@@ -35,7 +36,11 @@
       <option value="veni_vidi_vici">Veni, vidi, vici</option>
       <option value="carthago_delenda_est">Carthago delenda est</option>
     </select>
-    <ui-button>Test Shadow DOM!</ui-button>
+    <ui-button>
+      <slot>
+      Test Shadow DOM!
+      </slot>
+    </ui-button>
 
     <div class="ui slider-container ui-medium">
         <p>slider changing colors with a value of <p class="dyn-val"></p></p>
