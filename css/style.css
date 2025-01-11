@@ -7,6 +7,7 @@
 @import url('text.css');
 @import url('containers.css');
 @import url('element-themes.css');
+@import url('animations.css');
 
 :root {
   --darkgray: rgba(20, 20, 25);
@@ -69,32 +70,6 @@ body {
   gap: 2em;
 }
 
-a {
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  list-style-type: none;
-}
-
-*::selection {
-  color: var(--black);
-  background-color: var(--accent-color-2);
-}
-
-input.ui {
-  padding-left: 2em;
-  outline: none;
-  max-width: 80%;
-}
-
-select {
-  outline: none;
-  appearance: none;
-  background-image: none;
-}
 .sidebar {
   position: fixed;
   top: 0;
@@ -104,51 +79,3 @@ select {
   width: 3em;
 }
 
-epilogue {
-  padding-top: 4em;
-  padding-bottom: 4em;
-  grid-area: e;
-  justify-self: center;
-}
-
-epilogue h4 {
-  display: inline-block;
-}
-@keyframes wbicie {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-.tekst {
-  display: flex;
-  flex-direction: column;
-}
-
-.rola {
-  display: inline-block;
-  padding: 0 .5em;
-  max-width: 6em;
-  background-color: var(--role-color);
-  border-radius: 1em;
-}
-
-.karta h2 {
-  color: var(--accent-color);
-  text-align: center;
-}
-.date {
-  grid-area: date;
-}
-
-article > a.ui {
-  grid-area: more;
-}
-
-.body-text {
-  margin: 0 auto;
-}
