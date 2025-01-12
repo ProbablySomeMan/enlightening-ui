@@ -1,0 +1,38 @@
+.toggle {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 2em;
+  width: 3em;
+  appearance: none;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2em;
+  width: 3em;
+  background: radial-gradient(var(--bg), var(--non-bg));
+  border: 1px solid var(--darkgray);
+  border-radius: var(--border-r);
+}
+
+.checkmark:after {
+  --accent-color: var(--black);
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background-color: var(--accent-color);
+  border-radius: 1em;
+  transition: all 1s;
+}
+.toggle-cont:hover input ~ .checkmark {
+  cursor: pointer;
+}
+
+.toggle-cont .toggle:checked ~ .checkmark:after {
+  left: 1em;
+}
+
