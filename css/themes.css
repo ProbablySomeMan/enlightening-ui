@@ -1,6 +1,6 @@
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --text-color: var(--white);
     --btn-t-color: var(--darkgray);
     --bg: var(--bg-dark);
@@ -11,9 +11,11 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
+  */
+  --system-theme-preference: dark;
 }
 @media (prefers-color-scheme: light) {
+  /*
   :root {
     --text-color: var(--black);
     --bg: var(--bg-light);
@@ -23,4 +25,9 @@
     background: none;
     color: var(--black);
   }
+  */
+  --system-theme-preference: light;
+}
+:root {
+  --current-theme: light;
 }

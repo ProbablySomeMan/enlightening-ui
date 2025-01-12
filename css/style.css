@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('button.css');
 @import url('ui-rules.css');
-@import url('themes.css');
 @import url('knob.css');
 @import url('footer.css');
 @import url('text.css');
@@ -13,6 +12,7 @@
   --darkgray: rgba(20, 20, 25);
   --white: rgb(250, 240, 255);
   --white: var(--cream);
+  --current-theme: dark;
   
   --head-1: 7.5rem;
   --head-2: 6rem;
@@ -54,6 +54,7 @@
 
   --min-width: 3em;
 }
+@import url('themes.css');
 
 body {
   box-sizing: border-box;
