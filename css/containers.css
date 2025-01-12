@@ -21,3 +21,17 @@
   box-sizing: border-box;
 }
 
+.toggle-cont {
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  user-select: none;
+  height: 2em;
+  aspect-ratio: 2 / 3;
+}
+
+.toggle-cont input:checked ~ .checkmark {
+  background: radial-gradient(var(--bg), var(--non-bg));
+}
+
