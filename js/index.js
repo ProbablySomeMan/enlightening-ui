@@ -1,7 +1,11 @@
 const containerSlot = document.querySelector(".notif-slot")
 const errorButton = document.getElementById("event-01");
+const themeStyle = document.getElementById("theme-style")
+
 
 const successButton = document.getElementById("event-02");
+const themeToggle = document.getElementById("theme-toggle");
+let computedStyle = window.getComputedStyle(document.body);
 
 const slider = document.querySelector('.slider')
 
@@ -144,4 +148,42 @@ slider.addEventListener('input', () => {
   let newColor = Math.floor((slider.value / 100 ) * 256)
   document.documentElement.style.setProperty('--danger', `rgb(${newColor}, 0, 56)`)
   document.querySelector('.slider-container .dyn-val').innerHTML= newColor;
+})
+function toggleTheme() {
+  let currentTheme = computedStyle.getPropertyValue('--current-theme') 
+  if (currentTheme == 'dark') {
+      themeStyle.textContent = `
+        :root {
+          --text-color: var(--black);
+          --bg: var(--bg-light);
+          --non-bg: var(--bg-dark);
+          --system-theme-preference: light;
+          --current-theme: light;
+        }
+        .text_gradient{
+          background: none;
+          color: var(--black);
+        }`;
+  } else {
+      themeStyle.textContent = `
+        :root {
+          --text-color: var(--white);
+          --btn-t-color: var(--darkgray);
+          --bg: var(--bg-dark);
+          --non-bg: var(--bg-light);
+          --system-theme-preference: dark;
+          --current-theme: dark;
+        }
+        .text_gradient {
+          background: linear-gradient(var(--accent-color), var(--accent-color-2));
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }`
+  }
+  document.head.appendChild(themeStyle)
+}
+
+themeToggle.addEventListener('change', () => {
+  toggleTheme()
+  console.log("theme change!")
 })
