@@ -19,11 +19,14 @@
 }
 
 .ui-medium {
-  width: clamp(10em, 50%, 50em);
-  padding: 0 3em 0 3em;
   display: flex;
   flex-direction: column;
+  padding: 3em;
   align-items: center;
+}
+
+.row {
+  flex-direction: row;
 }
 
 .ui-medium p {

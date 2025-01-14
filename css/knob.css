@@ -7,7 +7,7 @@
 .knob-bg{
   pointer-events: none;
   aspect-ratio: 1 / 1;
-  width: clamp(10em, 20%, 50%);
+  width: 10em;
   height: auto;
   box-shadow: 0px .3em 0px var(--accent-color);
   border-radius: 50%;

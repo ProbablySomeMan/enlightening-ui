@@ -16,22 +16,29 @@
 
 .container {
   color: var(--text-color);
-  padding: 1rem;
+  padding: 2em;
   /* width: calc(100% - 3rem); */
   box-sizing: border-box;
+  height: auto;
+  width: fit-content;
+  display: inline-block;
 }
 
 .toggle-cont {
   padding: 0;
-  margin: 0 auto;
-  display: block;
+  width: 1em;
+  height: 1em;
   position: relative;
   user-select: none;
   height: 2em;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 3 / 2;
+  width: auto;
+  margin-right: 2em;
+  margin-bottom: .5rem;
+  align-self: center;
 }
 
 .toggle-cont input:checked ~ .checkmark {
-  background: radial-gradient(var(--bg), var(--non-bg));
+  background: radial-gradient(var(--white), var(--accent-color) 200%);
 }
 
