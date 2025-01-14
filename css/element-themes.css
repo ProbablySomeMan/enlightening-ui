@@ -1,15 +1,22 @@
 @import url('default-pallete.css');
 .danger {
   --accent-color: var(--danger);
-  color: var(--accent-color)
+  --accent-color-2: var(--orange);
+  color: var(--danger);
 }
 
 .positive {
   --accent-color: var(--positive);
-  color: var(--accent-color);
+  --accent-color-2: var(--green);
+  color: var(--positive);
 }
 
 .normal {
   --accent-color: var(--purple);
-  --accent-color-2: var(--cream);
+  --accent-color-2: var(--purple);
+}
+
+.orange {
+  --accent-color: var(--orange);
+  --accent-color-2: var(--yellow);
 }
