@@ -1,0 +1,34 @@
+
+:root {
+  /* colors described by common names*/
+  --gray: #8E8DBE;
+  --byzantium: #9B00A3;
+
+  --red: #F50052;
+    --l-red: #FF4785;
+  --orange: #E4674E;
+    --l-orange: #EA8571;
+  --yellow: #E6A560;
+    --l-yellow: #ECB983;
+  --green: #74A739;
+    --l-green: #81F495;
+    --lw-green: #96F550; /* COMPATIBILITY */
+  --blue: #0F25D2;
+    --l-blue: #A9E4EF;
+  --purple: #A30096;
+    --l-purple: #F500E0;
+
+  --black: #01000e;
+  --cream: #f5c1c5;
+
+  /* colors described by their ui function */
+
+  --text-color: var(--black);
+  --bg: var(--cream);
+  --non-bg: var(--black);
+}
+
+.text_gradient {
+  background: none;
+  color: var(--black);
+}

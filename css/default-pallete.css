@@ -8,10 +8,16 @@
 
   --red: #a40038;
   --orange: #d43e1f;
+    --l-orange: #A02F18;
   --yellow: #df892e;
+    --l-yellow: #C2731E;
   --green: #4e7026;
+    --l-green: #354C1A;
   --blue: #09177e;
+    --l-blue: #050E4C;
   --purple: #330043;
+    --l-purple: #1F0029;
+
   --black: #01000e;
   --cream: #f5c1c5;
 }
