@@ -7,11 +7,19 @@
   --lw-green: #96F550;
 
   --red: #a40038;
+    --l-red: #660022;
   --orange: #d43e1f;
+    --l-orange: #A02F18;
   --yellow: #df892e;
+    --l-yellow: #C2731E;
   --green: #4e7026;
+    --l-green: #354C1A;
   --blue: #09177e;
-  --purple: #330043;
+    --l-blue: #050E4C;
+  --old-purple: #330043;
+    --purple: #5E007A;
+    --l-purple: #330043;
+
   --black: #01000e;
   --cream: #f5c1c5;
 }

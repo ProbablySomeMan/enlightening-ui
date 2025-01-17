@@ -1,5 +1,5 @@
 *:where(.ui) {
-  --shade-color: var(--accent-color);
+  --shade-color: var(--accent-color-2);
   background: none;
   border: 1px solid black;
   box-sizing: border-box;
