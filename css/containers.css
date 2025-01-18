@@ -19,20 +19,15 @@
   padding: 2em;
   /* width: calc(100% - 3rem); */
   box-sizing: border-box;
-  height: auto;
-  width: fit-content;
   display: inline-block;
 }
 
 .toggle-cont {
   padding: 0;
-  width: 1em;
-  height: 1em;
+  width: 3rem;
+  height: 2rem;
   position: relative;
   user-select: none;
-  height: 2em;
-  aspect-ratio: 3 / 2;
-  width: auto;
   margin-right: 2em;
   margin-bottom: .5rem;
   align-self: center;

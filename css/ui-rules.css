@@ -19,9 +19,9 @@
 }
 
 .ui-medium {
+  font-size: var(--header-3);
   display: flex;
   flex-direction: column;
-  padding: 3em;
   align-items: center;
 }
 

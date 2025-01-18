@@ -153,17 +153,12 @@ function toggleTheme() {
   let currentTheme = computedStyle.getPropertyValue('--current-theme') 
   if (currentTheme == 'dark') {
       themeStyle.textContent = `
+        @import url('./css/light-pallete.css');
         :root {
-          --text-color: var(--black);
-          --bg: var(--bg-light);
-          --non-bg: var(--bg-dark);
           --system-theme-preference: light;
           --current-theme: light;
         }
-        .text_gradient{
-          background: none;
-          color: var(--black);
-        }`;
+        `;
   } else {
       themeStyle.textContent = `
         :root {
@@ -178,7 +173,8 @@ function toggleTheme() {
           background: linear-gradient(var(--accent-color), var(--accent-color-2));
           background-clip: text;
           -webkit-text-fill-color: transparent;
-        }`
+        }
+    `
   }
   document.head.appendChild(themeStyle)
 }

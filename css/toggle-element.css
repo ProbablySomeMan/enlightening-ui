@@ -2,8 +2,8 @@
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 2em;
-  width: 3em;
+  width: auto;
+  aspect-ratio: 3 / 2;
   appearance: none;
   padding: .2em;
   padding-right: 3em;
@@ -13,8 +13,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 2em;
-  width: 3em;
+  height: 100%;
+  width: 100%;
   background: var(--accent-color);
   /* background: radial-gradient(var(--white), var(--accent-color) 200%); */
   border: 2px solid var(--accent-color-2);
@@ -27,10 +27,10 @@
   content: "";
   position: absolute;
   width: 2em;
-  height: 2em;
-  /* background: radial-gradient(var(--accent-color), var(--non-bg) 250%); */
+  height: auto;
+  aspect-ratio: 1 / 1;
   background-color: var(--accent-color-2);
-  border-radius: 1em;
+  border-radius: 100%;
   border: 3px solid var(--accent-color);
   transition: all .25s;
 }
@@ -40,7 +40,7 @@
 }
 
 .toggle-cont .toggle:checked ~ .checkmark:after {
-  transform: translateX(1em);
+  transform: translateX(53%);
   transition: all .25s;
 }
 
