@@ -38,3 +38,6 @@
   background: var(--accent-color);
 }
 
+.table-cont {
+  overflow-x: scroll;
+}

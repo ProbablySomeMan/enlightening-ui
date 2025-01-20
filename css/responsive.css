@@ -1,7 +1,7 @@
-@media (min-width: 1080px) {
+@media (min-width: 768px) {
   :root {
     --modif: 0.1vw;
-    --head-1: clamp(3.5rem, 12vw + 1rem, 5rem);
+    --head-1: 12rem;
     --head-2: calc(2rem + var(--modif));
     --head-3: calc(1.75rem + var(--modif));
     --head-4: calc(1.6rem + var(--modif));
