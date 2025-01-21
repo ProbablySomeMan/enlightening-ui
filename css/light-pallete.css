@@ -26,6 +26,11 @@
   --text-color: var(--black);
   --bg: var(--cream);
   --non-bg: var(--black);
+
+  --accent-default: #201F1A;
+
+  --accent-color: var(--accent-default);
+  --accent-color-2: var(--accent-default);
 }
 
 .text_gradient {

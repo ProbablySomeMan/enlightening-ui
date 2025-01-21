@@ -22,4 +22,9 @@
 
   --black: #01000e;
   --cream: #f5c1c5;
+
+  --accent-default: #201F1A;
+
+  --accent-color: var(--accent-default);
+  --accent-color-2: var(--accent-default);
 }
