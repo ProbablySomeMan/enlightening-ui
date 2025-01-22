@@ -101,7 +101,6 @@ article > (h1, h2, h3, h4):first-of-type {
 .ui *:where(h1, h2, h3, h4, h5, h6, a, p, span, ul, li){
   --accent-color: inherit;
   --accent-color-2: inherit;
-  color: var(--btn-t-color);
   text-decoration: var(--decoration) underline;
 }
 
@@ -167,14 +166,6 @@ a > * {
   width: fit-content;
 }
 
-article:nth-child(even) {
-  --accent-color: var(--orange); 
-  --accent-color-2: var(--bg); 
-}
-article:nth-child(odd) {
-  --accent-color: var(--danger); 
-  --accent-color-2: var(--bg); 
-}
 .color-cont {
   background-color: var(--accent-color);
   color: var(--white);
