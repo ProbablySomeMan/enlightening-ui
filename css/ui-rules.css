@@ -18,6 +18,7 @@
   margin-bottom: 3em; 
 
   justify-self: center;
+
 }
 
 .ui-medium {
@@ -101,6 +102,7 @@ article > (h1, h2, h3, h4):first-of-type {
 .ui *:where(h1, h2, h3, h4, h5, h6, a, p, span, ul, li){
   --accent-color: inherit;
   --accent-color-2: inherit;
+  color: var(--btn-t-color);
   text-decoration: var(--decoration) underline;
 }
 
