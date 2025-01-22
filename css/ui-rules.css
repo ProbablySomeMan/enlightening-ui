@@ -51,16 +51,6 @@ img.ui {
   display: inline;
 }
 
-.image-desc {
-  background-color: var(--cream);
-  border: 6px solid var(--blue);
-  position: relative;
-  margin-bottom: 3em;
-  top: 0;
-  right: 0;
-  display: inline-block;
-}
-
 .notif {
   margin-top: 2em;
   width: 80%;
@@ -79,7 +69,7 @@ img.ui {
 article {
   color: var(--text-color);
   box-sizing: border-box;
-  background: 4inear-gradient(to top right, var(--bg), var(--accent-color));
+  background: linear-gradient(to top right, var(--bg), var(--accent-color));
   /* padding: var(--head-4) var(--head-3); */
   border-radius: calc(var(--head-2) * 0.6);
   margin: 0 auto;
@@ -99,7 +89,7 @@ article > (h1, h2, h3, h4):first-of-type {
 }
 
 .ui *:where(h1, h2, h3, h4, h5, h6, a, p, span, ul, li){
-  --accent-color: inherit;
+  --accent-color: var(--bg);
   --accent-color-2: inherit;
   text-decoration: var(--decoration) underline;
 }
@@ -191,6 +181,10 @@ input::placeholder {
 }
 
 input.ui {
+  padding-left: 2em;
+  outline: none;
+  max-width: 80%;
+}
 
 .rola {
   display: inline-block;
@@ -198,14 +192,5 @@ input.ui {
   max-width: 6em;
   background-color: var(--role-color);
   border-radius: 1em;
-}
-
-  padding-left: 2em;
-  outline: none;
-  max-width: 80%;
-}
-
-.date {
-  grid-area: date;
 }
 
