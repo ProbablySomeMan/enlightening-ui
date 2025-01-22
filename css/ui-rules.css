@@ -21,6 +21,10 @@
 
 }
 
+.ui:not(.danger, .positive, .normal) {
+  --shade-color: var(--black)
+}
+
 .ui-medium {
   font-size: var(--header-3);
   display: flex;

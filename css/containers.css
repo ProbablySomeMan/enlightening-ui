@@ -36,7 +36,7 @@
 
 .toggle-cont input:checked ~ .checkmark {
   background: radial-gradient(var(--white), var(--accent-color) 200%);
-  background: var(--accent-color);
+  background: var(--white);
 }
 
 .table-cont {
