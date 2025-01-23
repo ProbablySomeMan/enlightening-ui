@@ -39,7 +39,7 @@ affect the color accents.
 
 This snippet of code creates an orange toggle switch:  
 
-```
+```html
 <label class="container toggle-cont orange">
   <input id="theme-toggle" class="toggle" type="checkbox">
   <span class="checkmark"></span>
