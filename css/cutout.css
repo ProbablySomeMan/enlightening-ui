@@ -1,3 +1,5 @@
 .cutout {
-  box-shadow: 0px 0px 16px var(--white) inset;
+  box-shadow: 0px 2px 24px var(--black) inset;
+  border-radius: 2em;
+  margin-bottom: 3em;
 }
